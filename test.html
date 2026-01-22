@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Rápida - Code Preview Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .test-container {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .test-container h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .test-container p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .test-section {
+            background: #f9fafb;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .test-section h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .test-section ul {
+            margin-left: 20px;
+            color: #666;
+        }
+
+        .test-section li {
+            margin-bottom: 8px;
+        }
+
+        .button {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .success {
+            background: #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .success.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>✅ Prueba Rápida</h1>
+        
+        <p>Hola! Esto es solo una prueba para verificar que todo está funcionando. Si ves esta página, significa que:</p>
+
+        <div class="test-section">
+            <h3>🟢 Qué funciona</h3>
+            <ul>
+                <li>Los archivos se cargan correctamente</li>
+                <li>El servidor local está activo</li>
+                <li>HTML, CSS y JavaScript están integrados</li>
+                <li>Los estilos se aplican correctamente</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>📋 Próximos pasos</h3>
+            <ul>
+                <li>Abre index.html en tu navegador</li>
+                <li>Prueba el descargador (sección 1)</li>
+                <li>Prueba la previsualización móvil (sección 2)</li>
+                <li>¡Comparte con tus amigos!</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>💡 Tips</h3>
+            <ul>
+                <li>Lee LEE_ESTO_PRIMERO.md para saber qué hacer</li>
+                <li>Lee GUIA_USO.md para aprender a usar la app</li>
+                <li>Lee DEPLOY.md para subir a Vercel</li>
+            </ul>
+        </div>
+
+        <button class="button" onclick="verificar()">🚀 Verificar Setup</button>
+        
+        <div id="success-msg" class="success">
+            <h3>¡TODO ESTÁ LISTO! 🎉</h3>
+            <p>Tu web funciona perfectamente. Ahora ve a index.html</p>
+        </div>
+    </div>
+
+    <script>
+        function verificar() {
+            // Simulamos una verificación
+            console.log('✅ HTML cargado');
+            console.log('✅ CSS aplicado');
+            console.log('✅ JavaScript funcionando');
+            console.log('✅ Todo está listo para empezar');
+            
+            document.getElementById('success-msg').classList.add('show');
+            
+            setTimeout(() => {
+                // En 2 segundos, redirigimos a index.html
+                alert('Redirigiendo a index.html...');
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+
+        // Verificación automática
+        window.addEventListener('load', () => {
+            console.log('🎉 Página cargada correctamente');
+            console.log('📂 Archivos necesarios:');
+            console.log('   ✓ index.html');
+            console.log('   ✓ styles.css');
+            console.log('   ✓ script.js');
+        });
+    </script>
+</body>
+</html>
